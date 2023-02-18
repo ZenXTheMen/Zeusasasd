@@ -1,0 +1,122 @@
+/*META
+{
+    "name": "Mars",
+    "version": "1.0.0",
+    "description": "A custom theme for BetterDiscord.",
+    "author": "Zeus",
+    "homepage": "https://example.com",
+    "source": "https://github.com/your-username/your-repo"
+}
+*/
+
+
+@import url("https://fonts.googleapis.com/css?family=Roboto");
+
+:root {
+  --primary-color: #7289da;
+  --accent-color: #2c2f33;
+  --text-color: #dcddde;
+  --background-color: #36393f;
+}
+
+@keyframes animateZoom {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.server {
+  border-radius: 50%;
+  transition: all .2s;
+  &.selected {
+    background-color: var(--accent-color) !important;
+  }
+  &:hover {
+    background-color: rgba(255, 255, 255, .1);
+    animation: animateZoom .2s;
+  }
+}
+
+.member-username-inner {
+  color: var(--text-color);
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Remove clutter */
+.activityFeed-1OdzLY {
+  display: none;
+}
+
+/* Customize scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  background-color: var(--background-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--accent-color);
+  border-radius: 10px;
+}
+
+/* Remove animation delay */
+* {
+  animation-delay: 0s !important;
+}
+
+/* Disable auto-hiding UI elements */
+.ui-h5a2jK {
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+}
+
+/* Remove server folders background */
+.guildFolder-1-8BvV {
+  background-color: transparent !important;
+}
+
+/* Change chat background */
+.chat-3bRxxu {
+  background-color: var(--background-color) !important;
+}
+
+/* Remove server region labels */
+.regionLabel-3V7oP_ {
+  display: none;
+}
+
+/* Remove server member counts */
+.memberCount-3yaOab {
+  display: none;
+}
+
+/* Change server banner size */
+.banner-3xI7Zk {
+  height: 150px !important;
+}
+
+/* Enable better acceleration */
+html {
+  scroll-behavior: smooth !important;
+}
+
+/* Enable FPS unlock */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+img, video {
+  animation: spin 10s linear infinite;
+}
+
+/* Enable motion blur */
+html, body {
+  filter: blur(5px) !important;
+}
